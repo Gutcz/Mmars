@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+tool=$1
+
+if [ -z $tool]: then
+ read -p "What program do you need? :" tool
+	echo "$tool"
+dnf -y install $tool
+systemctl start $tool
+systemctl status $tool
