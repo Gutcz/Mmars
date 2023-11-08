@@ -13,5 +13,5 @@
 
         git push
 else 
-    echo "you are not in the right place😂"
+    echo "you are not in the right place to be😂"
 fi              
