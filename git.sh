@@ -1,12 +1,17 @@
 #!/bin/bash
 
-git add .
+ if [ -d .git ]; then 
 
-if [ $# -le 0 ]; then
-    read -p "Please  enter the commit message: " commit_message
-    git commit -m "$commit_message"
-else    
-    git commit -m $1
-fi
+     git add .
 
-git push
+     if [ $# -le 0 ]; then
+        read -p "Please  enter the commit message: " commit_message
+            git commit -m "$commit_message"
+            else    
+            git commit -m $1
+        fi
+
+        git push
+else 
+    echo "you are not in the right place😂"
+fi              
